@@ -1,0 +1,14 @@
+** Laby Developpement  **
+
+-  check implementation score is ok 
+- level2 start directly after level1 complete (and so on)
+- GAME OVER screen when score < 0
+- VICTORY screen when level 3 completed
+- display score on the game 
+- display time per level on the game
+- display total time on VICTORY screen 
+- automatic generation of the map for nnext levels
+- log in user 
+- save scores and time per user
+- speed regulation when played with mouse 
+- resizable window / game  ? 
