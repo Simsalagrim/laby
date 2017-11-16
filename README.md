@@ -7,3 +7,10 @@ All the needs for further developpement are listed in TODO_laby_dev.txt
 
 Thanks for any help 
 
+
+The laby_main_updgradeV1.py is the main script, all the classes and constantes are described in laby_classes.py  and laby_constantes.py
+
+
+Thoses scripts are in python 3.5 using the suitable version of pygame, its was developp on a windows 7 environmment. 
+
+To control the game with the mousse, use the script  Laby_main_sourie.py
