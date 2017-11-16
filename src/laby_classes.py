@@ -9,8 +9,8 @@ Laby : classes pour le jeu Laby
 """
 
 import pygame
-from pygame.locals import * 
-from laby_constances import *
+from pygame.locals import *
+from .laby_constances import *
 
 class Niveau:
     """Classe permettant de créer un niveau"""
@@ -23,7 +23,7 @@ class Niveau:
 
     def generer(self):
         """Méthode permettant de générer le niveau en fonction du fichier.
-        On crée une liste générale, contenant une liste par ligne à afficher""" 
+        On crée une liste générale, contenant une liste par ligne à afficher"""
 
         #On ouvre le fichier
         with open(self.fichier, "r") as fichier:
@@ -49,13 +49,13 @@ class Niveau:
             self.structure = structure_niveau
     
     def afficher(self, fenetre):
-        """Méthode permettant d'afficher le niveau en fonction 
+        """Méthode permettant d'afficher le niveau en fonction
         de la liste de structure renvoyée par generer()"""
 
         #Chargement des images (seule celle d'arrivée contient de la transparence)
         mur = pygame.image.load(image_mur).convert()
         depart = pygame.image.load(image_depart).convert()
-        arrivee = pygame.image.load(image_arrivee).convert_alpha()       
+        arrivee = pygame.image.load(image_arrivee).convert_alpha()
 
         #On parcourt la liste du niveau
         num_ligne = 0
@@ -98,13 +98,13 @@ class Perso:
         #Direction par défaut
         self.direction = self.droite
         
-        #Niveau dans lequel le personnage se trouve 
+        #Niveau dans lequel le personnage se trouve
         self.niveau = niveau
         
         #Bruit quand le personnage rentre dans un mur
         self.bruit_mur = bruit_mur
         
-        # Score du personnage à travers les nvieaux 
+        # Score du personnage à travers les nvieaux
         self.score = score
         
 
@@ -141,7 +141,7 @@ class Perso:
                 elif self.niveau.structure[self.case_y][self.case_x-1] == 'm':
                     self.bruit_mur.play()
                     self.score -= 1
-            self.direction = self.gauche        
+            self.direction = self.gauche
 
 #        #Déplacement vers le haut
         if direction == 'haut':
@@ -170,16 +170,16 @@ class Perso:
 
 
 """
-class MyMouse (pygame.mouse): 
+class MyMouse (pygame.mouse):
     def __init__(self):
-        return 
+        return
         
     def get_rel(self):
         # Diff de pos précedent
         return [1,1]
     
-    def position(self): 
-        # Lire les valeurs de la carte arduino 
+    def position(self):
+        # Lire les valeurs de la carte arduino
        # x_pos
        # y_pos
        return
