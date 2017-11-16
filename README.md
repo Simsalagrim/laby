@@ -44,7 +44,7 @@ $ deactivate
 ### Start
 
 ```
-$ python Laby_main_upgrade1.py
+$ python start.py
 ```
 
 ## Notes
