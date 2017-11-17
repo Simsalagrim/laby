@@ -1,22 +1,52 @@
 # Laby
-Laby video game
 
-The idea is to recreat a labyrinth game in Pygame with Python3.5
+> Laby video game
+
+The idea is to recreat a labyrinth game in Pygame with Python3.6
 Controls are keyboard arrows
 All the needs for further developpement are listed in TODO_laby_dev.txt
 
-Thanks for any help
+## Setup
 
+### Install the appropriate Python version (do this once)
 
-The laby_main_updgradeV1.py is the main script, all the classes and constantes are described in laby_classes.py  and laby_constantes.py
+Using [pyenv](https://github.com/pyenv/pyenv) (tool that helps you manage different Python version):
+```
+$ pyenv install -v 3.6.1
+```
 
+### Isolate your project to prevent Python version conflicts (do this once)
 
-Thoses scripts are in python 3.5 using the suitable version of pygame, its was developp on a windows 7 environmment.
+Using [virtualenv](https://virtualenv.pypa.io/en/stable/) (tool that prevents Python version and dependencies conflicts):
 
-To control the game with the mousse, use the script  Laby_main_sourie.py
+```
+$ virtualenv -p <path-to-python> .venv
+```
 
-## Start
+Note : replace `<path-to-python>` with the path to the `Python@3.6.1` binary. When installed with `pyenv`, the binary is located at `~/.pyenv/versions/3.6.1/bin/python3.6`
+
+## Getting started
+
+### Activate virtualenv
+
+Always activate your `virtualenv` when moving to this project directory:
+
+```
+$ source .venv/bin/activate
+```
+
+Once done with your work, deactivate the virtualenv:
+
+```
+$ deactivate
+```
+
+### Start
 
 ```
 $ python start.py
 ```
+
+## Notes
+
+Feel free to help!
